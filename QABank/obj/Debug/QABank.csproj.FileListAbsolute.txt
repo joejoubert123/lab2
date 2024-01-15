@@ -1,0 +1,7 @@
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\obj\Debug\QABank.csproj.AssemblyReference.cache
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\obj\Debug\QABank.csproj.CoreCompileInputs.cache
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\bin\Debug\QABank.exe.config
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\bin\Debug\QABank.exe
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\bin\Debug\QABank.pdb
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\obj\Debug\QABank.exe
+C:\QA\Software Craft\Starters\C#\2 - Pair programming\QABank\obj\Debug\QABank.pdb
