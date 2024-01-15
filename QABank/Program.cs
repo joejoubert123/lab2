@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static QABank.Program;
 
 namespace QABank
 {
@@ -64,7 +65,61 @@ namespace QABank
                 return generatedAccountNumber;
             }
         }
+
+     
+
+public class CurrentAccount : BankAccount
+    {
+        // Properties
+        public decimal OverdraftLimit { get; set; }
+
+        // Constructors
+        public CurrentAccount(string customerName, int accountNumber = 0, decimal balance = 0.0m, decimal overdraftLimit = 0.0m)
+            : base(customerName, accountNumber, balance)
+        {
+            OverdraftLimit = overdraftLimit;
+        }
+
+        // Override Withdraw method to enforce overdraft limit
+        public override void Withdraw(decimal amount)
+        {
+            if (amount < 0)
+            {
+                throw new ArgumentException("Withdrawal amount must be non-negative.");
+            }
+
+            if (amount > (Balance + OverdraftLimit))
+            {
+                throw new InvalidOperationException("Exceeding overdraft limit is not allowed.");
+            }
+
+            Balance -= amount;
+        }
     }
+
+    public class SavingsAccount : BankAccount
+    {
+        // Properties
+        public decimal InterestRate { get; set; }
+
+        // Constructors
+        public SavingsAccount(string customerName, int accountNumber = 0, decimal balance = 0.0m, decimal interestRate = 0.0m)
+            : base(customerName, accountNumber, balance)
+        {
+            InterestRate = interestRate;
+        }
+
+        // Method to add interest
+        public void AddInterest()
+        {
+            decimal interestAmount = Balance * (InterestRate / 100);
+            Balance += interestAmount;
+        }
+    }
+
+
+
+}
 
 
 }
